@@ -1,10 +1,27 @@
+/* Fuentes importadas: */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 } 
+
+:root {
+    /* Fuentes: */
+    --fuente1: Arial, Helvetica, sans-serif;
+
+    /* Paleta de Colores: */
+    --color1: #E4E0E1;
+    --color2: #D6C0B3;
+    --color3: #AB886D;
+    --color4: #C96868;
+    --color5: #000000;
+    --color6: #FFFFFF;
+}
+
 html{
-    font-size: 62.5%;
+    font-size: 10px;
 }
 
 .cabecera{
@@ -12,6 +29,7 @@ html{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 16px;
 }
 
 .cabecera__logo-nombre{
@@ -20,14 +38,14 @@ html{
 }
 
 .cabecera__logo{
-    width: 16px;
+    width: 1.6rem;
     height: auto;
 
 }
 
 .cabecera__titulo{
 font-size: 1.6rem;
-font-family: Arial, Helvetica, sans-serif;
+font-family: var(--fuente1);
 }
 
 .navegacion{
@@ -36,7 +54,527 @@ font-family: Arial, Helvetica, sans-serif;
 
 .cabecera__correo{
     font-size: 1.4rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fuente1);
     font-style: normal;
     text-decoration: none;
+}
+
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion{
+  gap: 25px;
+    width: 100%;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: auto;
+   
+}
+
+.presentacion__imagen {
+    height: auto;
+    width: 20rem;
+    border-radius: 50%; /*redondea la imagen*/
+
+}
+
+.presentacion__contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+   
+
+.presentacion__titulo{
+    font-size: 3.0rem;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.presentacion__subtitulo{
+    font-size: 2.0rem;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.presentacion__Redes{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.Redes__img{
+    width: 50px;
+
+}
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+
+.sobre-mi{
+    margin-top: 20px;
+    margin: 5px 0px 0px 0px;
+    padding-bottom: 10px;
+    background-color: var(--color3);
+    height: auto;
+}
+
+.sobre_mi__titulo{
+    margin-left: 15px;
+    padding-top: 15px;
+    font-size: 2.4rem;
+    font-family: var(--fuente1)
+    font-weight: bold;
+    width: auto;
+    text-align: center;
+}
+
+.sobre-mi__img{
+    width: 16px;
+    height: auto;
+}
+
+.sobre-mi__img--github{
+
+    width: 16px;
+    height: auto;
+}
+
+.sobre-mi__texto{
+    margin: 15px;
+    font-family: var(--fuente1);
+    font-size: 2.0rem;
+    line-height: 2.0rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+
+/* ------------------------------ Sección Habilidades ----------------------------------*/
+
+.Habilidades{
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-color: var(--color2);
+}
+
+.Habilidades__titulo{
+    margin-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    font-family: var(--fuente1);
+    font-size: 2.4rem;
+    font-weight: bold;
+    width: auto;
+    text-align: center;
+}
+
+.Habilidades__elemento{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    font-family: var(--fuente1);
+    font-weight:bold;
+    font-size: 1.4rem;
+    background-color: var(--color2);
+    border-radius: 10px;
+}
+
+.Habilidades__elemento p{
+    font-family: var(--fuente1);
+    font-size: 2.4rem;
+}
+   
+.Habilidades__img{
+    width: 8rem;
+}
+
+/* ------------------------------ Sección Aficiones ----------------------------------*/
+
+.aficiones{
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-color: var(--color4);
+}
+
+.aficiones__titulo{
+    margin-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    font-family: var(--fuente1);
+    font-size: 2.4rem;
+    font-weight: bold;
+    width: auto;
+    text-align: center;
+}
+
+.aficiones__tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.aficiones__elemento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100px;
+    padding: 10px;
+    font-family: var(--fuente1);
+    font-weight:bold;
+    text-align: center;
+    font-size: 1.4rem;
+    background-color: var(--color1);
+    box-shadow: 0px 0px 20px;
+    border-radius: 10px;
+}
+
+.aficiones__img{
+    width: 8rem;
+}
+
+
+/* ------------------------------ Sección Formacion ----------------------------------*/
+
+.formacion{
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: var(--color2); 
+}
+
+.formacion__titulo{
+    padding-bottom: 40px;
+    font-family: var(--fuente1);
+    font-size: 2.4rem;
+    font-weight: bold;
+    width: auto;
+    text-align: center;
+}
+
+.formacion__tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.formacion__elemento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 225px;
+    height: 280px;
+    gap: 10px;
+   
+    padding: 20px 0px 20px 0px;
+    background-color: var(--color1);
+    box-shadow: 0px 0px 15px;
+    border: 1px solid var(--color4);
+    border-radius: 10px;
+    font-family: var(--fuente1);
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+
+/* ------------------------------ Sección experiencia ----------------------------------*/
+
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--color1);
+    font-family: var(--fuente1);
+    width: auto;
+}
+
+.experiencia__titulo{
+    padding-top: 15px;
+    padding-bottom: 25px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.exp-ingenieria{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    padding-left: 2.4rem;
+    padding-bottom: 60px;
+    gap: 20px;
+     
+}
+
+.exp-ingenieria__titulo {
+    font-size: 2.2rem;
+    color: var(--color4);
+    text-align: left;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.exp-ingenieria__elemento{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap:5px;
+    padding-left: 15px;
+    line-height: 2.0rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.exp-ingenieria__elemento span{
+    color: var(--color4);
+    font-weight: bolder;
+}
+
+.exp-ingenieria__elemento span {
+    color: var(--color4);
+    font-weight: bolder;
+}
+
+.exp-ingenieria__elemento h4 {
+     font-size: 1.6rem;
+    align-self: self-start;
+    padding-right: 50px;
+}
+
+.exp-ingenieria__elemento h5 {
+    align-self: self-start;
+    color: var(--color3);
+    font-size: 1.2rem;
+}
+
+.exp-ingenieria__lista {
+    padding-left: 25px;
+    padding-right: 15px;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+
+/* ------------------------------ Sección contacto ----------------------------------*/
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: var(--color3);
+}
+
+.contacto__titulo {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    font-family: var(--fuente1);
+    font-size: 2.4rem;
+    font-weight: bold;
+    width: auto;
+    text-align: center;
+}
+
+.contacto__form {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 20px;
+}
+
+.contacto__campo {
+    border: none;
+    font-family: var(--fuente1);
+    padding-left: 10px;
+    width: 80%;
+    height: 30px;
+    font-size: 1.6rem;
+    background-color: var(--color1);
+}
+
+.contacto__campo--textarea {
+    border: none;
+    font-family: var(--fuente1);
+    font-size: 1.6rem;
+    height: 100px;
+    padding: 10px;
+}
+
+.contacto__boton {
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.contacto__boton--active {
+    border: 3px solid var(--color4);
+    background-color: var(--color4);
+    color: var(--color1);
+    box-shadow: 3px 3px 5px var(--color5);
+}
+
+.contacto__boton--disabled {
+    background-color: #cccccc;  /* Fondo gris claro */
+    color: #666666;             /* Texto gris oscuro */
+    opacity: 0.5;               /* Hacer que el botón sea un poco translúcido */
+    border: 1px solid #999999;  /* Borde más claro */
+    cursor: not-allowed;          /* Cursor de "no permitido" */
+    pointer-events: none;       /* Desactivar interacción con el botón */
+}
+
+.contacto__boton:hover {
+    color: var(--color5);
+}
+
+.contacto__boton:active {
+    box-shadow: -1px -2px 10px var(--color5);
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    height: auto;
+    padding: 25px;
+    background-color: var(--color2);
+    font-family:var(--fuente1);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/* Tablets: */
+@media (min-width: 768px) {
+    :root {
+        /* Paleta de Colores: */
+        --color1: #f5eded;
+        --color2: #e2dad6;
+        --color3: #7fa1c3;
+        --color4: #6482ad;
+        --color5: #000000;
+        --color6: #ffffff;
+    }
+
+    html {
+        font-size: 14px; /* Para que 1rem = 14px */
+    }
+
+    .presentacion {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    .presentacion__foto {
+        width: 18rem;
+    }
+
+    .presentacion__info {
+        width: 60%;
+    }
+
+    .aficiones__elemento {
+        width: 140px;
+    }
+
+    .formacion__titulo {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .formacion__tarjetas {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .formacion__elemento {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 210px;
+        height: 330px;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .exp-Frontend__boton {
+        width: 300px;
+        height: 60px;
+    }
+
+    .contacto__boton {
+        width: 120px;
+        height: 45px;
+    }
+}
+
+
+/* Desktops: */
+@media (min-width: 1440px) {
+
+    .navegacion {
+        display: block;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        font-family: var(--fuente1);
+        color: var(--color4);
+        font-size: 1.4rem;
+        font-weight: 700;
+        list-style: none;
+    }
+
+    .navegacion__elemento a {
+        text-decoration: none;
+    }
+
+    .navegacion__elemento:hover {
+        border-bottom: 2px solid var(--color4);
+        cursor: pointer;
+    }
+
+    .presentacion {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    .sobre-mi__descripcion {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-family: var(--fuente1);
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        font-weight: 500;
+        text-align: justify;
+    }
+
+    .formacion__tarjetas {
+        gap: 120px;
+    }
 }
